@@ -1,6 +1,7 @@
-GO 
+USE master
+go
 CREATE DATABASE QLBH2
-GO 
+go
 USE QLBH2
 
 CREATE TABLE SanPham 
@@ -71,7 +72,7 @@ CREATE TABLE ThuChi
 (
 id int NOT NULL,
 loai bit NOT NULL,
-id_nhan_vien int(10) NOT NULL,
+id_nhan_vien int NOT NULL,
 ngay date NOT NULL,
 nguyen_nhan nvarchar(100) NOT NULL,
 so_tien float NOT NULL,
