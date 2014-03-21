@@ -90,7 +90,11 @@ PRIMARY KEY (id),
 
 
 ALTER TABLE SanPham ADD FOREIGN KEY (id_loai) REFERENCES LoaiSanPham(id)
+GO
 ALTER TABLE SanPham ADD FOREIGN KEY (id_nha_cung_cap) REFERENCES NhaCungCap(id)
+GO
 ALTER TABLE ChiTietHoaDon ADD FOREIGN KEY (id_san_pham) REFERENCES SanPham(id)
+GO
 ALTER TABLE ChiTietHoaDon ADD FOREIGN KEY (id_hoa_don) REFERENCES HoaDon(id)
+GO
 ALTER TABLE ThuChi ADD FOREIGN KEY (id_nhan_vien) REFERENCES NhanVien(id)
