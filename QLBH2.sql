@@ -1,7 +1,6 @@
-USE master
-IF OBJECT_ID('dbo.QLBH2', 'U') IS NOT NULL
-  DROP TABLE dbo.Scores
-CREATE TABLE QLBH2
+GO 
+CREATE DATABASE QLBH2
+GO 
 USE QLBH2
 
 CREATE TABLE SanPham 
@@ -90,8 +89,8 @@ PRIMARY KEY (id),
 )
 
 
-ALTER TABLE SanPham ADD FOREIGN KEY (id_khach_hang) REFERENCES KhachHang(id)
-ALTER TABLE SanPham ADD FOREIGN KEY (id_nhan_vien) REFERENCES NhanVien(id)
+ALTER TABLE SanPham ADD FOREIGN KEY (id_loai) REFERENCES LoaiSanPham(id)
+ALTER TABLE SanPham ADD FOREIGN KEY (id_nha_cung_cap) REFERENCES NhaCungCap(id)
 ALTER TABLE ChiTietHoaDon ADD FOREIGN KEY (id_san_pham) REFERENCES SanPham(id)
 ALTER TABLE ChiTietHoaDon ADD FOREIGN KEY (id_hoa_don) REFERENCES HoaDon(id)
 ALTER TABLE ThuChi ADD FOREIGN KEY (id_nhan_vien) REFERENCES NhanVien(id)
